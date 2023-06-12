@@ -5,7 +5,7 @@ FROM gentoo/stage3:systemd
 RUN emerge --sync
 
 # Install eselect repository module
-RUN emerge --ask app-eselect/eselect-repository dev-vcs/git
+RUN emerge app-eselect/eselect-repository dev-vcs/git
 
 # Enable and sync GURU overlay
 RUN eselect repository enable guru

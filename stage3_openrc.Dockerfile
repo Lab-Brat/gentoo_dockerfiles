@@ -5,7 +5,7 @@ FROM gentoo/stage3:amd64-desktop-openrc-20230501
 RUN emerge --sync
 
 # Install eselect repository module
-RUN emerge --ask app-eselect/eselect-repository dev-vcs/git
+RUN emerge --quiet-build app-eselect/eselect-repository dev-vcs/git
 
 # Enable and sync GURU overlay
 RUN eselect repository enable guru
