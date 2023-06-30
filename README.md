@@ -8,4 +8,9 @@ Naming convention:
 * `latest_*` suffix means that the most recent stage3 image is being used.
 
 Example of how these containers are being used can be found 
-[here](https://github.com/Lab-Brat/gentoo_update/blob/main/tests/compose.yaml)
+[here](https://github.com/Lab-Brat/gentoo_update/blob/main/tests/compose.yaml)  
+
+Images can be built via:
+```bash
+docker buildx build -f old_openrc_desktop.Dockerfile -t old_openrc_desktop .
+```
