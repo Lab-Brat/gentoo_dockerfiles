@@ -1,6 +1,8 @@
 # Gentoo Linux image with systemd
 FROM gentoo/stage3:systemd
 
+ENV FEATURES="-ipc-sandbox -mount-sandbox -network-sandbox -pid-sandbox"
+
 # Sync Portage source tree
 RUN emerge --sync
 

@@ -1,6 +1,8 @@
 # old (2023.05.08) Gentoo Linux image with openrc 
 FROM gentoo/stage3:amd64-desktop-openrc-20230508
 
+ENV FEATURES="-ipc-sandbox -mount-sandbox -network-sandbox -pid-sandbox"
+
 # Sync Portage source tree
 RUN emerge --sync
 
@@ -13,4 +15,3 @@ RUN emerge --sync guru
 
 # Install dependencies for testing
 RUN emerge --quiet-build y dev-python/pip dev-python/build
-
