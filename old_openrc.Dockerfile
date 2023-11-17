@@ -1,5 +1,5 @@
 # old (2023.05.08) Gentoo Linux image with openrc 
-FROM gentoo/stage3:amd64-openrc-20230508
+FROM gentoo/stage3:amd64-openrc-20231030
 
 ENV FEATURES="-ipc-sandbox -mount-sandbox -network-sandbox -pid-sandbox"
 
